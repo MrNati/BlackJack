@@ -19,7 +19,7 @@ let suits = ['Hearts', 'Clubs', 'Diamonds', 'Spades'],
 let gameStarted = false,
     gameOver = false,
     playerWon = false,
-    dealerCards = [];
+    dealerCards = [],
     playerCards = [],
     dealerScore = 0,
     playerScore = 0,
@@ -34,19 +34,41 @@ let gameStarted = false,
 //Hide Hit and Stay Button at the start of the Game
 hitButton.style.display = 'none';
 stayButton.style.display = 'none';
+showStatus();
 
 //Add some function to new game button
 newGameButton.addEventListener('click', function () {
-    textArea.innerText = 'Game Started...';
+    
+    gameStarted = true;
+    gameOver = false;
+    playerWon = false;
+    
+    //intiate deck
+    deck = createDeck();
+    
+    //dealer card
+    dealerCards = [
+        getCardString(getNextCard()), 
+        getCardString(getNextCard())
+    ];
+    
+    //player card
+    playerCards = [
+        getCardString(getNextCard()), 
+        getCardString(getNextCard())
+    ];
+
+    //update DOM
     newGameButton.style.display = 'none';
     hitButton.style.display = 'inline';
     stayButton.style.display = 'inline';
+    showStatus();
 });
 
 //create deck
 function createDeck() {
     let deck = [];
-
+    
     //add available cards to the deck
     for (let suitIdx = 0; suitIdx < suits.length; suitIdx++) {
         for (let valueIdx = 0; valueIdx < values.length; valueIdx++) {
@@ -61,8 +83,6 @@ function createDeck() {
     return deck;
 }
 
-//intiate deck
-let deck = createDeck();
 
 //get card from deck
 function getNextCard() {
@@ -74,11 +94,13 @@ function getCardString(playerCard) {
     return playerCard.value + ' of ' + playerCard.suit;
 }
 
-//player card
-let playerCards = [
-    getCardString(getNextCard()), 
-    getCardString(getNextCard())
-];
+function showStatus() {
+    if (!gameStarted) {
+        textArea.innerText = 'Welcome to Blackjack!';
+        return;
+    }
+}
+
 
 //welcome message
 console.log('Welcome to Blackjack!');
