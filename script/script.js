@@ -16,6 +16,16 @@ let suits = ['Hearts', 'Clubs', 'Diamonds', 'Spades'];
 let values = ['Ace', 'King', 'Queen', 'Jack', 'Ten', 'Nine', 
 'Eight', 'Seven', 'Six', 'Five', 'Four', 'Three', 'Two'];
 
+/*
+*
+*Play Game
+*
+*/
+
+//Hide Hit and Stay Button at the start of the Game
+hitButton.style.display = 'none';
+stayButton.style.display = 'none';
+
 //create deck
 function createDeck() {
     let deck = [];
