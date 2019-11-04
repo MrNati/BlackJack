@@ -1,3 +1,15 @@
+/*
+*
+*Game Variables
+*
+*/
+
+// DOM elements
+let textArea = document.querySelector('#text-area');
+let newGameButton = document.querySelector('#new-game-button');
+let hitButton = document.querySelector('#hit-button');
+let stayButton = document.querySelector('#stay-button');
+
 //available cards
 let suits = ['Hearts', 'Clubs', 'Diamonds', 'Spades'];
 
