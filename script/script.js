@@ -26,6 +26,14 @@ let values = ['Ace', 'King', 'Queen', 'Jack', 'Ten', 'Nine',
 hitButton.style.display = 'none';
 stayButton.style.display = 'none';
 
+//Add some function to new game button
+newGameButton.addEventListener('click', function () {
+    textArea.innerText = 'Game Started...';
+    newGameButton.style.display = 'none';
+    hitButton.style.display = 'inline';
+    stayButton.style.display = 'inline';
+});
+
 //create deck
 function createDeck() {
     let deck = [];
