@@ -4,18 +4,25 @@ let suits = ['Hearts', 'Clubs', 'Diamonds', 'Spades'];
 let values = ['Ace', 'King', 'Queen', 'Jack', 'Ten', 'Nine', 
 'Eight', 'Seven', 'Six', 'Five', 'Four', 'Three', 'Two'];
 
-//card in deck
-let deck = [];
+//create deck
+function createDeck() {
+    let deck = [];
 
-//add available cards to the deck
-for (let suitIdx = 0; suitIdx < suits.length; suitIdx++) {
-    for (let valueIdx = 0; valueIdx < values.length; valueIdx++) {
-        deck.push(values[valueIdx] + ' of ' + suits[suitIdx]);
+    //add available cards to the deck
+    for (let suitIdx = 0; suitIdx < suits.length; suitIdx++) {
+        for (let valueIdx = 0; valueIdx < values.length; valueIdx++) {
+            deck.push(values[valueIdx] + ' of ' + suits[suitIdx]);
+        }
     }
+
+    return deck;
 }
 
+//intiate deck
+let deck = createDeck();
+
 //player card
-let playerCards = [deck[0], deck[2]];
+let playerCards = [deck[0], deck[1]];
 
 //welcome message
 console.log('Welcome to Blackjack!');
