@@ -21,8 +21,13 @@ function createDeck() {
 //intiate deck
 let deck = createDeck();
 
+//get card from deck
+function getNextCard() {
+    return deck.shift();
+}
+
 //player card
-let playerCards = [deck[0], deck[1]];
+let playerCards = [getNextCard(), getNextCard()];
 
 //welcome message
 console.log('Welcome to Blackjack!');
