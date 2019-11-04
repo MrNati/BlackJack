@@ -1,20 +1,30 @@
 /*
 *
-*Game Variables
+*Variables
 *
 */
 
-// DOM elements
+// DOM variables
 let textArea = document.querySelector('#text-area');
 let newGameButton = document.querySelector('#new-game-button');
 let hitButton = document.querySelector('#hit-button');
 let stayButton = document.querySelector('#stay-button');
 
-//available cards
+//Card variables
 let suits = ['Hearts', 'Clubs', 'Diamonds', 'Spades'];
 
 let values = ['Ace', 'King', 'Queen', 'Jack', 'Ten', 'Nine', 
 'Eight', 'Seven', 'Six', 'Five', 'Four', 'Three', 'Two'];
+
+//Game variables
+let gameStarted = false,
+    gameOver = false,
+    playerWon = false,
+    dealerCards = [];
+    playerCards = [],
+    dealerScore = 0,
+    playerScore = 0,
+    deck = [];
 
 /*
 *
