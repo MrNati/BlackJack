@@ -5,16 +5,15 @@
 */
 
 // DOM variables
-let textArea = document.querySelector('#text-area');
-let newGameButton = document.querySelector('#new-game-button');
-let hitButton = document.querySelector('#hit-button');
-let stayButton = document.querySelector('#stay-button');
+let textArea = document.querySelector('#text-area'),
+    newGameButton = document.querySelector('#new-game-button'),
+    hitButton = document.querySelector('#hit-button'),
+    stayButton = document.querySelector('#stay-button');
 
 //Card variables
-let suits = ['Hearts', 'Clubs', 'Diamonds', 'Spades'];
-
-let values = ['Ace', 'King', 'Queen', 'Jack', 'Ten', 'Nine', 
-'Eight', 'Seven', 'Six', 'Five', 'Four', 'Three', 'Two'];
+let suits = ['Hearts', 'Clubs', 'Diamonds', 'Spades'],
+    values = ['Ace', 'King', 'Queen', 'Jack', 'Ten', 'Nine', 
+        'Eight', 'Seven', 'Six', 'Five', 'Four', 'Three', 'Two'];
 
 //Game variables
 let gameStarted = false,
